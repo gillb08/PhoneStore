@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhoneStore.DAL.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -9,13 +10,14 @@ namespace PhoneStore.DAL.Entities
 {
     public class Product
     {
-        [Key]
-        public int ProductId { get; set; }  
+        
+        public Guid ProductId { get; set; }  
         public string Name { get; set; }
+        public ProductCategory Category { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
-        public int Avaliability { get; set; }
+        public ProductAvaliability Avaliability { get; set; }
         public List<ProductImage> ProductImages { get; set;}
-        public List<OrderItem> OrderItems { get; set;}
+        public List<OrderItem> OrderItems { get; set; }
     }
 }

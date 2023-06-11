@@ -7,7 +7,7 @@ namespace PhoneStore.API.Extension
     {
         public static void AddConnection(this IServiceCollection services, WebApplicationBuilder builder)
         {
-            services.AddDbContext<AppDbContext>(dpOption =>
+             services.AddDbContext<AppDbContext>(dpOption =>
             {
                 var ConnectionString = builder.Configuration.GetSection("ConnectionStrings")["ConnString"];
                 dpOption.UseSqlServer(ConnectionString);

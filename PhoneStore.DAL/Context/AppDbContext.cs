@@ -11,6 +11,9 @@ namespace PhoneStore.DAL.Context
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<PersonDelete> People { get; set; }
+        public DbSet<AddressDelete> Addresses { get; set; }
+        public DbSet<EmailDelete> EmailAddresses { get; set; }
 
     }
 
